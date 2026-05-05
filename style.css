@@ -140,6 +140,127 @@ h1 {
   box-shadow: 0 3px 10px var(--btn-shadow);
 }
 
+.hidden {
+  display: none;
+}
+
+#email-section {
+  margin-top: 30px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--container-border);
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+#email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#email-form input[type="email"] {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid var(--container-border);
+  background: var(--number-bg);
+  color: var(--text-color);
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#email-form input[type="email"]:focus {
+  border-color: #667eea;
+}
+
+#partnership-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#partnership-form input, #partnership-form textarea {
+  padding: 12px 20px;
+  border-radius: 15px;
+  border: 1px solid var(--container-border);
+  background: var(--number-bg);
+  color: var(--text-color);
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#partnership-form textarea {
+  border-radius: 15px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+#partnership-form input:focus, #partnership-form textarea:focus {
+  border-color: #667eea;
+}
+
+#partnership-send-btn {
+  background: var(--btn-gradient);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#partnership-send-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--btn-shadow);
+}
+
+#partnership-status {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+#send-btn {
+  background: var(--btn-gradient);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#send-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--btn-shadow);
+}
+
+#form-status {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 600px) {
   .container {
     padding: 25px;

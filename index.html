@@ -12,6 +12,29 @@
     <h1>Lotto Number Generator</h1>
     <div class="lotto-numbers"></div>
     <button id="generator-btn">Generate Numbers</button>
+    
+    <div id="email-section" class="hidden">
+      <hr>
+      <h3>Email My Numbers</h3>
+      <form id="email-form" action="https://formspree.io/f/xvzlabop" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="hidden" name="numbers" id="hidden-numbers">
+        <button type="submit" id="send-btn">Send Email</button>
+      </form>
+      <p id="form-status"></p>
+    </div>
+
+    <div id="partnership-section">
+      <hr>
+      <h3>제휴 문의</h3>
+      <form id="partnership-form" action="https://formspree.io/f/xvzlabop" method="POST">
+        <input type="text" name="name" placeholder="성함/업체명" required>
+        <input type="email" name="email" placeholder="이메일 주소" required>
+        <textarea name="message" placeholder="문의 내용" required></textarea>
+        <button type="submit" id="partnership-send-btn">문의하기</button>
+      </form>
+      <p id="partnership-status"></p>
+    </div>
   </div>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
