@@ -2,7 +2,29 @@ console.log('main.js loaded');
 
 const lottoNumbersContainer = document.querySelector('.lotto-numbers');
 const generatorBtn = document.getElementById('generator-btn');
+const themeToggle = document.getElementById('theme-toggle');
 
+// Theme Logic
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+  document.body.classList.add('dark-mode');
+  themeToggle.textContent = '☀️';
+}
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  
+  let theme = 'light';
+  if (document.body.classList.contains('dark-mode')) {
+    theme = 'dark';
+    themeToggle.textContent = '☀️';
+  } else {
+    themeToggle.textContent = '🌙';
+  }
+  localStorage.setItem('theme', theme);
+});
+
+// Lotto Generation Logic
 if (generatorBtn) {
   console.log('Button found');
   generatorBtn.addEventListener('click', () => {
